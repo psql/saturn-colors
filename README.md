@@ -4,7 +4,7 @@ Based on colors from my blog, [psql.me](http://psql.me/)
 
 #Sublime Theme
 ![preview](http://static.tumblr.com/fvrop9o/pfOnam76h/screen_shot_2014-08-20_at_12.58.28_pm.png)
-Ported by [@flovan](http://github.com/flovan)]
+Ported by [@flovan](http://github.com/flovan)
 
 #XCode Theme
 ![preview](http://static.tumblr.com/fvrop9o/r4Cn5mgmr/screen_shot_2014-05-15_at_11.30.39_am.png)
