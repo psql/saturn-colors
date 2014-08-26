@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Saturn Prism.js theme &mdash; demo</title>
+	<style>
+		/*
+		  GENERAL "MEH" STYLES
+		*/
+		body {
+		  margin: 0;
+		  background-color: #444444;
+		  padding: 40px;
+		  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+		  color: #CCC;
+		}
+
+		.wrapper:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+
+		.col pre {
+		  max-height: 250px;
+		}
+
+		h1,
+		h2 {
+		  color: #CCCCCC;
+		  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+		}
+		a {
+			color: #CCC;
+		}
+		a:hover {
+			text-decoration: none;
+		}
+	</style>
+	<link rel="stylesheet" href="../saturn-prismjs.css">
+</head>
+<body>
+	<h1>Demo of the Saturn <a href="http://prismjs.com">Prism.js</a> theme</h1>
+	<div class="wrapper">
+		<div class="col">
+		<h2>HTML5 Boilerplate</h2>
+<pre class="language-markup"><code>&lt;!doctype html&gt;
+&lt;html class=&quot;no-js&quot; lang=&quot;&quot;&gt;
+		&lt;head&gt;
+				&lt;meta charset=&quot;utf-8&quot;&gt;
+				&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+				&lt;title&gt;&lt;/title&gt;
+				&lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;
+				&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+
+				&lt;!-- Place favicon.ico and apple-touch-icon(s) in the root directory --&gt;
+
+				&lt;link rel=&quot;stylesheet&quot; href=&quot;css/normalize.css&quot;&gt;
+				&lt;link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;&gt;
+				&lt;script src=&quot;js/vendor/modernizr-2.8.3.min.js&quot;&gt;&lt;/script&gt;
+		&lt;/head&gt;
+		&lt;body&gt;
+				&lt;!--[if lt IE 8]&gt;
+						&lt;p class=&quot;browsehappy&quot;&gt;You are using an &lt;strong&gt;outdated&lt;/strong&gt; browser. Please &lt;a href=&quot;http://browsehappy.com/&quot;&gt;upgrade your browser&lt;/a&gt; to improve your experience.&lt;/p&gt;
+				&lt;![endif]--&gt;
+
+				&lt;!-- Add your site or application content here --&gt;
+				&lt;p&gt;Hello world! This is HTML5 Boilerplate.&lt;/p&gt;
+
+				&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js&quot;&gt;&lt;/script&gt;
+				&lt;script&gt;window.jQuery || document.write('&lt;script src=&quot;js/vendor/jquery-{{JQUERY_VERSION}}.min.js&quot;&gt;&lt;/script&gt;')&lt;/script&gt;
+				&lt;script src=&quot;js/plugins.js&quot;&gt;&lt;/script&gt;
+				&lt;script src=&quot;js/main.js&quot;&gt;&lt;/script&gt;
+
+				&lt;!-- Google Analytics: change UA-XXXXX-X to be your site's ID. --&gt;
+				&lt;script&gt;
+						(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+						function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+						e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+						e.src='//www.google-analytics.com/analytics.js';
+						r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+						ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+				&lt;/script&gt;
+		&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+		</div>
+		<div class="col">
+			<h2>Normalize.css</h2>
+<pre class="language-css"><code>/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+ 
+ @import 'some/file';
+ @import rem(padding, 10, 'auto');
+ 
+ div {
+		background-color: $red;
+ }
+
+html {
+	font-family: sans-serif; /* 1 */
+	-ms-text-size-adjust: 100%; /* 2 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+	margin: 0;
+}
+
+/* HTML5 display definitions
+	 ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+	display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block; /* 1 */
+	vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+	display: none;
+}
+
+/* Links
+	 ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+	background: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+/* Text-level semantics
+	 ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+	font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+	font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+	background: #ff0;
+	color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+	font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+/* Embedded content
+	 ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+	border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+/* Grouping content
+	 ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
+figure {
+	margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+	overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+/* Forms
+	 ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit; /* 1 */
+	font: inherit; /* 2 */
+	margin: 0; /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+	overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+	text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button; /* 2 */
+	cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+	line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box; /* 1 */
+	padding: 0; /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+	-webkit-appearance: textfield; /* 1 */
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box; /* 2 */
+	box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+	border: 0; /* 1 */
+	padding: 0; /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+	overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+	font-weight: bold;
+}
+
+/* Tables
+	 ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td,
+th {
+	padding: 0;
+}</code></pre>
+		</div>
+		<div class="col">
+			<h2>Fast.js</h2>
+<pre class="language-javascript"><code>(function (module, exports) {
+
+
+'use strict';
+
+/**
+ * # Bind
+ * Analogue of `Function::bind()`.
+ *
+ * ```js
+ * var bind = require('fast.js').bind;
+ * var bound = bind(myfunc, this, 1, 2, 3);
+ *
+ * bound(4);
+ * ```
+ *
+ *
+ * @param  {Function} fn          The function which should be bound.
+ * @param  {Object}   thisContext The context to bind the function to.
+ * @param  {mixed}    args, ...   Additional arguments to pre-bind.
+ * @return {Function}             The bound function.
+ */
+exports.bind = function fastBind (fn, thisContext) {
+	var boundLength = arguments.length - 2,
+			boundArgs;
+
+	if (boundLength > 0) {
+		boundArgs = new Array(boundLength);
+		for (var i = 0; i < boundLength; i++) {
+			boundArgs[i] = arguments[i + 2];
+		}
+		return function () {
+			var length = arguments.length,
+					args = new Array(boundLength + length),
+					i;
+			for (i = 0; i < boundLength; i++) {
+				args[i] = boundArgs[i];
+			}
+			for (i = 0; i < length; i++) {
+				args[boundLength + i] = arguments[i];
+			}
+			return fn.apply(thisContext, args);
+		};
+	}
+	return function () {
+		return fn.apply(thisContext, arguments);
+	};
+};
+
+/**
+ * # Partial Application
+ *
+ * Partially apply a function. This is similar to `.bind()`,
+ * but with one important difference - the returned function is not bound
+ * to a particular context. This makes it easy to add partially
+ * applied methods to objects. If you need to bind to a context,
+ * use `.bind()` instead.
+ *
+ * > Note: This function does not support partial application for
+ * constructors, for that see `partialConstructor()`
+ *
+ *
+ * @param  {Function} fn          The function to partially apply.
+ * @param  {mixed}    args, ...   Arguments to pre-bind.
+ * @return {Function}             The partially applied function.
+ */
+exports.partial = function fastPartial (fn) {
+	var boundLength = arguments.length - 1,
+			boundArgs;
+
+	boundArgs = new Array(boundLength);
+	for (var i = 0; i < boundLength; i++) {
+		boundArgs[i] = arguments[i + 1];
+	}
+	return function () {
+		var length = arguments.length,
+				args = new Array(boundLength + length),
+				i;
+		for (i = 0; i < boundLength; i++) {
+			args[i] = boundArgs[i];
+		}
+		for (i = 0; i < length; i++) {
+			args[boundLength + i] = arguments[i];
+		}
+		return fn.apply(this, args);
+	};
+};
+
+/**
+ * # Partial Constructor
+ *
+ * Partially apply a constructor function. The returned function
+ * will work with or without the `new` keyword.
+ *
+ *
+ * @param  {Function} fn          The constructor function to partially apply.
+ * @param  {mixed}    args, ...   Arguments to pre-bind.
+ * @return {Function}             The partially applied constructor.
+ */
+exports.partialConstructor = function fastPartialConstructor (fn) {
+	var boundLength = arguments.length - 1,
+			boundArgs;
+
+	boundArgs = new Array(boundLength);
+	for (var i = 0; i < boundLength; i++) {
+		boundArgs[i] = arguments[i + 1];
+	}
+	return function partialed () {
+		var length = arguments.length,
+				args = new Array(boundLength + length),
+				i;
+		for (i = 0; i < boundLength; i++) {
+			args[i] = boundArgs[i];
+		}
+		for (i = 0; i < length; i++) {
+			args[boundLength + i] = arguments[i];
+		}
+
+		var thisContext = Object.create(fn.prototype),
+				result = fn.apply(thisContext, args);
+
+		if (result != null && (typeof result === 'object' || typeof result === 'function')) {
+			return result;
+		}
+		else {
+			return thisContext;
+		}
+	};
+};
+
+/**
+ * # Clone
+ *
+ * Clone an item. Primitive values will be returned directly,
+ * arrays and objects will be shallow cloned. If you know the
+ * type of input you're dealing with, call `.cloneArray()` or `.cloneObject()`
+ * instead.
+ *
+ * @param  {mixed} input The input to clone.
+ * @return {mixed}       The cloned input.
+ */
+exports.clone = function clone (input) {
+	if (!input || typeof input !== 'object') {
+		return input;
+	}
+	else if (Array.isArray(input)) {
+		return exports.cloneArray(input);
+	}
+	else {
+		return exports.cloneObject(input);
+	}
+};
+
+/**
+ * # Clone Array
+ *
+ * Clone an array or array like object (e.g. `arguments`).
+ * This is the equivalent of calling `Array.prototype.slice.call(arguments)`, but
+ * significantly faster.
+ *
+ * @param  {Array} input The array or array-like object to clone.
+ * @return {Array}       The cloned array.
+ */
+exports.cloneArray = function fastCloneArray (input) {
+	var length = input.length,
+			sliced = new Array(length),
+			i;
+	for (i = 0; i < length; i++) {
+		sliced[i] = input[i];
+	}
+	return sliced;
+};
+
+/**
+ * # Clone Object
+ *
+ * Shallow clone a simple object.
+ *
+ * > Note: Prototypes and non-enumerable properties will not be copied!
+ *
+ * @param  {Object} input The object to clone.
+ * @return {Object}       The cloned object.
+ */
+exports.cloneObject = function fastCloneObject (input) {
+	var keys = Object.keys(input),
+			total = keys.length,
+			cloned = {},
+			i, key;
+
+	for (i = 0; i < total; i++) {
+		key = keys[i];
+		cloned[key] = input[key];
+	}
+
+	return cloned;
+};
+
+
+/**
+ * # Concat
+ *
+ * Concatenate multiple arrays.
+ *
+ * > Note: This function is effectively identical to `Array.prototype.concat()`.
+ *
+ *
+ * @param  {Array|mixed} item, ... The item(s) to concatenate.
+ * @return {Array}                 The array containing the concatenated items.
+ */
+exports.concat = function fastConcat () {
+	var length = arguments.length,
+			arr = [],
+			i, item, childLength, j;
+
+	for (i = 0; i < length; i++) {
+		item = arguments[i];
+		if (Array.isArray(item)) {
+			childLength = item.length;
+			for (j = 0; j < childLength; j++) {
+				arr.push(item[j]);
+			}
+		}
+		else {
+			arr.push(item);
+		}
+	}
+	return arr;
+};
+
+/**
+ * # Map
+ *
+ * A fast `.map()` implementation.
+ *
+ * @param  {Array}    subject     The array (or array-like) to map over.
+ * @param  {Function} fn          The mapper function.
+ * @param  {Object}   thisContext The context for the mapper.
+ * @return {Array}                The array containing the results.
+ */
+exports.map = function fastMap (subject, fn, thisContext) {
+	var length = subject.length,
+			result = new Array(length),
+			iterator = thisContext !== undefined ? bindInternal3(fn, thisContext) : fn,
+			i;
+	for (i = 0; i < length; i++) {
+		result[i] = iterator(subject[i], i, subject);
+	}
+	return result;
+};
+
+/**
+ * # Filter
+ *
+ * A fast `.filter()` implementation.
+ *
+ * @param  {Array}    subject     The array (or array-like) to filter.
+ * @param  {Function} fn          The filter function.
+ * @param  {Object}   thisContext The context for the filter.
+ * @return {Array}                The array containing the results.
+ */
+exports.filter = function fastFilter (subject, fn, thisContext) {
+	var length = subject.length,
+			result = [],
+			iterator = thisContext !== undefined ? bindInternal3(fn, thisContext) : fn,
+			i;
+	for (i = 0; i < length; i++) {
+		if (iterator(subject[i], i, subject)) {
+			result.push(subject[i]);
+		}
+	}
+	return result;
+};
+
+/**
+ * # Reduce
+ *
+ * A fast `.reduce()` implementation.
+ *
+ * @param  {Array}    subject      The array (or array-like) to reduce.
+ * @param  {Function} fn           The reducer function.
+ * @param  {mixed}    initialValue The initial value for the reducer, defaults to subject[0].
+ * @param  {Object}   thisContext  The context for the reducer.
+ * @return {mixed}                 The final result.
+ */
+exports.reduce = function fastReduce (subject, fn, initialValue, thisContext) {
+	var length = subject.length,
+			iterator = thisContext !== undefined ? bindInternal4(fn, thisContext) : fn,
+			i, result;
+
+	if (initialValue === undefined) {
+		i = 1;
+		result = subject[0];
+	}
+	else {
+		i = 0;
+		result = initialValue;
+	}
+
+	for (; i < length; i++) {
+		result = iterator(result, subject[i], i, subject);
+	}
+
+	return result;
+};
+
+/**
+ * # Reduce Right
+ *
+ * A fast `.reduceRight()` implementation.
+ *
+ * @param  {Array}    subject      The array (or array-like) to reduce.
+ * @param  {Function} fn           The reducer function.
+ * @param  {mixed}    initialValue The initial value for the reducer, defaults to subject[0].
+ * @param  {Object}   thisContext  The context for the reducer.
+ * @return {mixed}                 The final result.
+ */
+exports.reduceRight = function fastReduce (subject, fn, initialValue, thisContext) {
+	var length = subject.length,
+			iterator = thisContext !== undefined ? bindInternal4(fn, thisContext) : fn,
+			i, result;
+
+	if (initialValue === undefined) {
+		i = length - 2;
+		result = subject[length - 1];
+	}
+	else {
+		i = length - 1;
+		result = initialValue;
+	}
+
+	for (; i >= 0; i--) {
+		result = iterator(result, subject[i], i, subject);
+	}
+
+	return result;
+};
+
+
+/**
+ * # For Each
+ *
+ * A fast `.forEach()` implementation.
+ *
+ * @param  {Array}    subject     The array (or array-like) to iterate over.
+ * @param  {Function} fn          The visitor function.
+ * @param  {Object}   thisContext The context for the visitor.
+ */
+exports.forEach = function fastForEach (subject, fn, thisContext) {
+	var length = subject.length,
+			iterator = thisContext !== undefined ? bindInternal3(fn, thisContext) : fn,
+			i;
+	for (i = 0; i < length; i++) {
+		iterator(subject[i], i, subject);
+	}
+};
+
+/**
+ * # Some
+ *
+ * A fast `.some()` implementation.
+ *
+ * @param  {Array}    subject     The array (or array-like) to iterate over.
+ * @param  {Function} fn          The visitor function.
+ * @param  {Object}   thisContext The context for the visitor.
+ * @return {Boolean}              true if at least one item in the array passes the truth test.
+ */
+exports.some = function fastSome (subject, fn, thisContext) {
+	var length = subject.length,
+			iterator = thisContext !== undefined ? bindInternal3(fn, thisContext) : fn,
+			i;
+	for (i = 0; i < length; i++) {
+		if (iterator(subject[i], i, subject)) {
+			return true;
+		}
+	}
+	return false;
+};
+
+/**
+ * # Index Of
+ *
+ * A faster `Array.prototype.indexOf()` implementation.
+ *
+ * @param  {Array}  subject   The array (or array-like) to search within.
+ * @param  {mixed}  target    The target item to search for.
+ * @param  {Number} fromIndex The position to start searching from, if known.
+ * @return {Number}           The position of the target in the subject, or -1 if it does not exist.
+ */
+exports.indexOf = function fastIndexOf (subject, target, fromIndex) {
+	var length = subject.length,
+			i = 0;
+
+	if (fromIndex !== undefined) {
+		i = fromIndex >> 0;
+		if (i < 0) {
+			i += length;
+			if (i < 0) {
+				i = 0;
+			}
+		}
+	}
+
+	for (; i < length; i++) {
+		if (subject[i] === target) {
+			return i;
+		}
+	}
+	return -1;
+};
+
+
+
+/**
+ * # Last Index Of
+ *
+ * A faster `Array.prototype.lastIndexOf()` implementation.
+ *
+ * @param  {Array}  subject The array (or array-like) to search within.
+ * @param  {mixed}  target  The target item to search for.
+ * @param  {Number} fromIndex The position to start searching backwards from, if known.
+ * @return {Number}         The last position of the target in the subject, or -1 if it does not exist.
+ */
+exports.lastIndexOf = function fastLastIndexOf (subject, target, fromIndex) {
+	var length = subject.length,
+			i = length - 1;
+
+	if (fromIndex !== undefined) {
+		i = fromIndex >> 0;
+		if (i < 0) {
+			i += length;
+		}
+	}
+	for (; i >= 0; i--) {
+		if (subject[i] === target) {
+			return i;
+		}
+	}
+	return -1;
+};
+
+/**
+ * # Try
+ *
+ * Allows functions to be optimised by isolating `try {} catch (e) {}` blocks
+ * outside the function declaration. Returns either the result of the function or an Error
+ * object if one was thrown. The caller should then check for `result instanceof Error`.
+ *
+ * ```js
+ * var result = fast.try(myFunction);
+ * if (result instanceof Error) {
+ *    console.log('something went wrong');
+ * }
+ * else {
+ *   console.log('result:', result);
+ * }
+ * ```
+ *
+ * @param  {Function} fn The function to invoke.
+ * @return {mixed}       The result of the function, or an `Error` object.
+ */
+exports['try'] = function fastTry (fn) {
+	try {
+		return fn();
+	}
+	catch (e) {
+		if (!(e instanceof Error)) {
+			return new Error(e);
+		}
+		else {
+			return e;
+		}
+	}
+};
+
+// alias of `.try()` for older JS engines.
+exports.attempt = exports['try'];
+
+/**
+ * # Apply
+ *
+ * Faster version of `Function::apply()`, optimised for 8 arguments or fewer.
+ *
+ *
+ * @param  {Function} subject   The function to apply.
+ * @param  {Object} thisContext The context for the function, set to undefined or null if no context is required.
+ * @param  {Array} args         The arguments for the function.
+ * @return {mixed}              The result of the function invocation.
+ */
+exports.apply = function fastApply (subject, thisContext, args) {
+	return thisContext != null ? applyWithContext(subject, thisContext, args) : applyNoContext(subject, args);
+};
+
+
+/**
+ * Internal helper for applying a function with a context.
+ */
+function applyWithContext (subject, thisContext, args) {
+	switch (args.length) {
+		case 0:
+			return subject.call(thisContext);
+		case 1:
+			return subject.call(thisContext, args[0]);
+		case 2:
+			return subject.call(thisContext, args[0], args[1]);
+		case 3:
+			return subject.call(thisContext, args[0], args[1], args[2]);
+		case 4:
+			return subject.call(thisContext, args[0], args[1], args[2], args[3]);
+		case 5:
+			return subject.call(thisContext, args[0], args[1], args[2], args[3], args[4]);
+		case 6:
+			return subject.call(thisContext, args[0], args[1], args[2], args[3], args[4], args[5]);
+		case 7:
+			return subject.call(thisContext, args[0], args[1], args[2], args[3], args[4], args[5], args[6]);
+		case 8:
+			return subject.call(thisContext, args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7]);
+		default:
+			return subject.apply(thisContext, args);
+	}
+}
+
+/**
+ * Internal helper for applying a function without a context.
+ */
+function applyNoContext (subject, args) {
+	switch (args.length) {
+		case 0:
+			return subject();
+		case 1:
+			return subject(args[0]);
+		case 2:
+			return subject(args[0], args[1]);
+		case 3:
+			return subject(args[0], args[1], args[2]);
+		case 4:
+			return subject(args[0], args[1], args[2], args[3]);
+		case 5:
+			return subject(args[0], args[1], args[2], args[3], args[4]);
+		case 6:
+			return subject(args[0], args[1], args[2], args[3], args[4], args[5]);
+		case 7:
+			return subject(args[0], args[1], args[2], args[3], args[4], args[5], args[6]);
+		case 8:
+			return subject(args[0], args[1], args[2], args[3], args[4], args[5], args[6], args[7]);
+		default:
+			return subject.apply(undefined, args);
+	}
+}
+
+/**
+ * Internal helper to bind a function known to have 3 arguments
+ * to a given context.
+ */
+function bindInternal3 (func, thisContext) {
+	return function (a, b, c) {
+		return func.call(thisContext, a, b, c);
+	};
+}
+
+/**
+ * Internal helper to bind a function known to have 4 arguments
+ * to a given context.
+ */
+function bindInternal4 (func, thisContext) {
+	return function (a, b, c, d) {
+		return func.call(thisContext, a, b, c, d);
+	};
+}
+
+})(
+	typeof module === 'undefined' ? { exports: window.fast = {} } : module,
+	typeof exports === 'undefined' ? window.fast : exports
+
+);</code></pre>
+		</div>
+	</div>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+</body>
+</html>
