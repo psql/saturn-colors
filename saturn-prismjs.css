@@ -1,0 +1,156 @@
+/*
+  CUSTOM PRISM.JS THEME - http://prismjs.com
+
+  Colors and idea by Pasqual D'Silva
+  ~ https://github.com/psql/saturn-colors
+
+  Converted by Florian Vanthuyne
+  ~ https://github.com/flovan
+*/
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #b4a1d6;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+code[class*="language-css"],
+pre[class*="language-css"] {
+  color: #db8958;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #2f1f4a;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: #2f1f4a;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #201632;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #675a80;
+}
+
+.token.punctuation {
+  color: #b4a1d6;
+}
+.token.punctuation.comment {
+  color: #675a80;
+}
+.token.punctuation.string, .token.punctuation.variable, .token.punctuation.parameters, .token.punctuation.array {
+  color: #b4a1d6;
+}
+.token.punctuation.heading, .token.punctuation.identity {
+  color: #31a7c9;
+}
+.token.punctuation.important {
+  color: #ffb899;
+}
+.token.operator {
+  color: #b4a1d6;
+}
+.token.entity {
+  color: #ffb899;
+  text-decoration: underline;
+}
+.token.function, .token.keyword {
+  color: #31a7c9;
+}
+.token.regexp, .token.important {
+  color: #74CAB4;
+}
+.token.selector {
+  color: #E2454B;
+  text-decoration: underline;
+}
+.token.tag {
+  color: #675a80;
+}
+.token.tag-id {
+  color: #E2454B;
+}
+.token.attr-name {
+  color: #db8958;
+}
+.token.attr-value {
+  color: #DBD36E;
+}
+.token.attr-value .punctuation {
+  color: #b4a1d6;
+}
+.token.atrule {
+  color: #74CAB4;
+}
+.token.atrule .atrule-id {
+  color: #7450b6;
+}
+.token.atrule .punctuation {
+  color: #b4a1d6;
+}
+.token.string, .token.char, .token.builtin, .token.url {
+  color: #DBD36E;
+}
+.token.pseudo-class {
+  color: #db8958;
+}
+.token.boolean, .token.number, .token.constant {
+  color: #db8958;
+}
+.token.symbol {
+  color: #DBD36E;
+}
+.token.property {
+  color: #b4a1d6;
+}
+.token.important {
+  font-weight: bold;
+}
+.token.entity {
+  cursor: help;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+.token.char {
+  color: red;
+}
