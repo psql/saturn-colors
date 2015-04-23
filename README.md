@@ -17,4 +17,8 @@ Ported by [@jarodl](http://github.com/jarodl)
 Also available as an [Atom Editor Theme](https://github.com/psql/saturn-syntax).
 ![preview](https://camo.githubusercontent.com/b9332b187cf965142713582d7b41dd4fda352f54/687474703a2f2f636c2e6c792f58306c572f53637265656e25323053686f74253230323031342d30382d31322532306174253230342e33332e3331253230504d2e706e67)
 
+#Coda 2 Theme
+![preview](https://dl.dropboxusercontent.com/u/371704/Screen%20Shot%202015-04-22%20at%2012.56.02%20PM.png)
+Ported by [@josue](http://twitter.com/josue)
+
 A work in progress. Feel free to submit a pull request if you have some better ideas.
