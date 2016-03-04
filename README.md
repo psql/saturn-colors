@@ -2,6 +2,11 @@
 
 Based on colors from my blog, [psql.me](http://psql.me/)
 
+#Alternate XCode Theme
+
+![preview](https://pbs.twimg.com/media/CcukHs2W8AA-g_x.jpg)
+*NEW* Double Time theme for XCode - a more mellow alternative.
+
 #Sublime Theme
 ![preview](http://static.tumblr.com/fvrop9o/pfOnam76h/screen_shot_2014-08-20_at_12.58.28_pm.png)
 Ported by [@flovan](http://github.com/flovan)
