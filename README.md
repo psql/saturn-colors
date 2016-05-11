@@ -27,4 +27,9 @@ Also available as an [Atom Editor Theme](https://github.com/psql/saturn-syntax).
 ![preview](https://dl.dropboxusercontent.com/u/371704/Screen%20Shot%202015-04-22%20at%2012.56.02%20PM.png)
 Ported by [@josue](http://twitter.com/josue)
 
+#Visual Studio 2015 Theme
+![preview](https://raw.githubusercontent.com/dittodhole/saturn-colors/master/visualstudio2015.PNG)
+
+Ported by [@dittodhole](https://github.com/dittodhole)
+
 A work in progress. Feel free to submit a pull request if you have some better ideas.
